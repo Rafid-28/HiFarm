@@ -7,6 +7,7 @@ class RoutesClass {
   static String getHomeRoute() => home;
 
   static List<GetPage> routes = [
-    GetPage(name: home, page: () => HomeView()),
+    // GetPage(name: home, page: () => HomeView()),
+    GetPage(name: home, page: () => ShopPage()),
   ];
 }
