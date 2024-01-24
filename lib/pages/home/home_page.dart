@@ -1,22 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hi_farm/pages/news/components/news_list_tile.dart';
-import 'package:hi_farm/pages/news/models/news_model.dart';
-import 'package:hi_farm/style/app_style.dart';
+import 'package:hi_farm/pages/home/components/consultant_list.dart';
+import 'package:hi_farm/pages/home/components/news.dart';
+import 'package:hi_farm/pages/home/components/search.dart';
+import 'package:hi_farm/pages/home/components/user_info.dart';
 import '../../size_config.dart';
-
-class AgricultureNews {
-  final String title;
-  final String description;
-  final String imageUrl;
-
-  AgricultureNews({
-    required this.title,
-    required this.description,
-    required this.imageUrl,
-  });
-}
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key});
@@ -47,124 +36,6 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class UserInfo extends StatelessWidget {
-  const UserInfo({Key? key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 50.0), // Add padding here
-      child: ListTile(
-        contentPadding: EdgeInsets.zero,
-        title: const Padding(
-          padding: EdgeInsets.only(bottom: 7),
-          child: Text("👋 Hello!"),
-        ),
-        subtitle: Text(
-          "User0",
-          style: Theme.of(context)
-              .textTheme
-              .headlineSmall!
-              .copyWith(fontWeight: FontWeight.w700),
-        ),
-        trailing: Container(
-          width: 48.0,
-          height: 48.0,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(AppStyle.profile),
-              fit: BoxFit.cover,
-              repeat: ImageRepeat.repeat,
-            ),
-            borderRadius: BorderRadius.all(Radius.circular(18.0)),
-          ),
-          child: Stack(
-            alignment: Alignment.topRight,
-            children: [
-              Container(
-                width: 18.0,
-                height: 18.0,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: AppStyle.primarySwatch,
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 3.0,
-                    style: BorderStyle.solid,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class Search extends StatelessWidget {
-  const Search({Key? key});
-  @override
-  Widget build(BuildContext context) {
-    SizeConfig().init(context);
-
-    return Padding(
-      padding:
-          EdgeInsets.symmetric(vertical: SizeConfig.blockSizeVertical! * 3),
-      child: TextField(
-        decoration: InputDecoration(
-          filled: true,
-          prefixIcon: CupertinoButton(
-            onPressed: () {},
-            child: SvgPicture.asset(AppStyle.searchIcon),
-          ),
-          suffixIcon: CupertinoButton(
-            onPressed: () {},
-            child: SvgPicture.asset(AppStyle.filtterIcon),
-          ),
-          hintText: "Search...",
-          fillColor: AppStyle.inputFillColor,
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: BorderRadius.circular(18),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class Consultant extends StatelessWidget {
-  const Consultant({Key? key});
-
-  @override
-  Widget build(BuildContext context) {
-    SizeConfig().init(context);
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        SizedBox(height: 20),
-        Text('Our Best Architect Profiles',
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
-        SizedBox(height: 20),
-        Container(
-          height: 300,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: <Widget>[
-              promoCard('assets/images/one.jpeg'),
-              promoCard('assets/images/four.jpeg'),
-              promoCard('assets/images/three.jpeg'),
-              promoCard('assets/images/two.jpeg')
-            ],
-          ),
-        ),
-      ],
     );
   }
 }
@@ -248,51 +119,4 @@ class ServicesButton extends StatelessWidget {
       ),
     );
   }
-}
-
-class AgricultureNewsCard extends StatelessWidget {
-  const AgricultureNewsCard({Key? key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(
-          height: 10,
-        ),
-        Text(
-          "Recent News",
-          style: Theme.of(context)
-              .textTheme
-              .titleMedium!
-              .copyWith(fontWeight: FontWeight.w700, letterSpacing: 1),
-        ),
-        Container(
-          child: ListView.builder(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            itemCount: NewsData.recentNewsData.length,
-            itemBuilder: (context, index) =>
-                NewsListTile(NewsData.recentNewsData[index]),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-Widget promoCard(String image) {
-  return Container(
-    margin: EdgeInsets.only(right: 20.0),
-    height: 500,
-    width: 200,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(20),
-      image: DecorationImage(
-        fit: BoxFit.cover,
-        image: AssetImage(image),
-      ),
-    ),
-  );
 }
