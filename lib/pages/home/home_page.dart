@@ -29,19 +29,22 @@ class HomePage extends StatelessWidget {
         padding: EdgeInsets.symmetric(
           horizontal: SizeConfig.blockSizeHorizontal! * 7,
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const UserInfo(),
-            const SizedBox(height: 16),
-            const Search(),
-            const SizedBox(height: 16),
-            const Services(),
-            const SizedBox(height: 16),
-            const Consultant(),
-            const SizedBox(height: 16),
-            const AgricultureNewsCard(),
-          ],
+        child: SingleChildScrollView(
+          // Wrap with SingleChildScrollView
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const UserInfo(),
+              const SizedBox(height: 16),
+              const Search(),
+              const SizedBox(height: 16),
+              const Services(),
+              const SizedBox(height: 16),
+              const Consultant(),
+              const SizedBox(height: 16),
+              const AgricultureNewsCard(),
+            ],
+          ),
         ),
       ),
     );
@@ -252,29 +255,29 @@ class AgricultureNewsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-            height: 10,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(
+          height: 10,
+        ),
+        Text(
+          "Recent News",
+          style: Theme.of(context)
+              .textTheme
+              .titleMedium!
+              .copyWith(fontWeight: FontWeight.w700, letterSpacing: 1),
+        ),
+        Container(
+          child: ListView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            itemCount: NewsData.recentNewsData.length,
+            itemBuilder: (context, index) =>
+                NewsListTile(NewsData.recentNewsData[index]),
           ),
-          Text(
-            "Recent News",
-            style: Theme.of(context)
-                .textTheme
-                .titleMedium!
-                .copyWith(fontWeight: FontWeight.w700, letterSpacing: 1),
-          ),
-          Expanded(
-            child: ListView.builder(
-              itemCount: NewsData.recentNewsData.length,
-              itemBuilder: (context, index) =>
-                  NewsListTile(NewsData.recentNewsData[index]),
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
