@@ -26,7 +26,7 @@ class _NewsListTileState extends State<NewsListTile> {
         padding: EdgeInsets.all(12.0),
         height: 130,
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 8, 89, 129),
+          color: Color.fromRGBO(130, 145, 114, 1),
           borderRadius: BorderRadius.circular(26.0),
         ),
         child: Row(

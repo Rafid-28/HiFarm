@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'FLUTTER UI TUTORIAL',
+      title: 'HiFarm',
       theme: AppStyle.theme,
       home: const BottomBar(),
     );

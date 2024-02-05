@@ -7,7 +7,7 @@ class UserInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 50.0), // Add padding here
+      padding: const EdgeInsets.only(top: 50.0),
       child: ListTile(
         contentPadding: EdgeInsets.zero,
         title: const Padding(

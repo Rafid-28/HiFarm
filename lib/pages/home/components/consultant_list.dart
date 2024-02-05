@@ -12,11 +12,11 @@ class Consultant extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         SizedBox(height: 20),
-        Text('Our Best Architect Profiles',
+        Text('Meet Our Consultants',
             style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
         SizedBox(height: 20),
         Container(
-          height: 300,
+          height: 200,
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: <Widget>[
@@ -35,8 +35,7 @@ class Consultant extends StatelessWidget {
 Widget promoCard(String image) {
   return Container(
     margin: EdgeInsets.only(right: 20.0),
-    height: 500,
-    width: 200,
+    width: 150,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(20),
       image: DecorationImage(

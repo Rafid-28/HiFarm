@@ -25,7 +25,7 @@ class Search extends StatelessWidget {
             child: SvgPicture.asset(AppStyle.filtterIcon),
           ),
           hintText: "Search...",
-          fillColor: AppStyle.inputFillColor,
+          fillColor: Color.fromRGBO(223, 231, 218, 1),
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.circular(18),
