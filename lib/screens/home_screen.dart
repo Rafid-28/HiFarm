@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
-                      "Special For You",
+                      "News",
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -59,15 +59,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: const Text("See all"),
                     ),
                   ],
-                ),
-                const SizedBox(height: 10),
-                ListView.builder(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: products.length,
-                  itemBuilder: (context, index) {
-                    return ProductCard(product: products[index]);
-                  },
                 ),
               ],
             ),
