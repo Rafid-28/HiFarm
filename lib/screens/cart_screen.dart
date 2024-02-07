@@ -3,8 +3,8 @@
 // import 'package:hi_farm/constants.dart';
 // import 'package:hi_farm/models/cart_item.dart';
 // import 'package:hi_farm/widgets/cart_tile.dart';
+// import 'package:hi_farm/widgets/check_out_box.dart';
 // import 'package:ionicons/ionicons.dart';
-
 
 // class CartScreen extends StatefulWidget {
 //   const CartScreen({super.key});
@@ -46,18 +46,8 @@
 //         padding: const EdgeInsets.all(20),
 //         itemBuilder: (context, index) => CartTile(
 //           item: cartItems[index],
-//           onRemove: () {
-//             if (cartItems[index].quantity != 1) {
-//               setState(() {
-//                 cartItems[index].quantity--;
-//               });
-//             }
-//           },
-//           onAdd: () {
-//             setState(() {
-//               cartItems[index].quantity++;
-//             });
-//           },
+//           onRemove: () {},
+//           onAdd: () {},
 //         ),
 //         separatorBuilder: (context, index) => const SizedBox(height: 20),
 //         itemCount: cartItems.length,

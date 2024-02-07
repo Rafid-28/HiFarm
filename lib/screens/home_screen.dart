@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hi_farm/constants.dart';
-import 'package:hi_farm/models/product.dart';
-import 'package:hi_farm/widgets/categories.dart';
+import 'package:hi_farm/models/consultant.dart';
+
+import 'package:hi_farm/widgets/features.dart';
 import 'package:hi_farm/widgets/home_appbar.dart';
 import 'package:hi_farm/widgets/home_slider.dart';
 import 'package:hi_farm/widgets/product_card.dart';
 import 'package:hi_farm/widgets/search_field.dart';
-import 'package:ionicons/ionicons.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

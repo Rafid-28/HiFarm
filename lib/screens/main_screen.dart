@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hi_farm/constants.dart';
+
+import 'package:hi_farm/screens/consultant_list.dart';
 import 'package:hi_farm/screens/home_screen.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ionicons/ionicons.dart';
@@ -15,11 +17,11 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int currentTab = 2;
   List screens = const [
-    Scaffold(),
+    ConsultantList(),
     Scaffold(),
     HomeScreen(),
-    // CartScreen(),
     Scaffold(),
+    Scaffold()
   ];
 
   @override

@@ -22,39 +22,35 @@ class Product {
 
 final List<Product> products = [
   Product(
-    title: "Wireless Headphones",
+    title: "Consultant 1",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "assets/wireless.png",
-    price: 120,
+    image: "assets/images/four.jpeg",
+    price: 0,
     colors: [
       Colors.black,
-      Colors.blue,
-      Colors.orange,
     ],
     category: "Headphones",
-    rate: 4.8,
+    rate: 0,
   ),
   Product(
-    title: "Woman Sweter",
+    title: "Consultant 2",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "assets/sweet.png",
-    price: 120,
+    image: "assets/images/two.jpeg",
+    price: 0,
     colors: [
-      Colors.brown,
-      Colors.red,
-      Colors.pink,
+      Colors.black,
     ],
     category: "Woman Fashion",
     rate: 4.8,
   ),
   Product(
-    title: "Smart Watch",
+    title: "Consultant 3",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "assets/miband.jpg",
-    price: 55,
+    image: "assets/images/one.jpeg",
+    price: 0,
     colors: [
       Colors.black,
     ],

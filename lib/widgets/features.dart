@@ -1,10 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:hi_farm/models/category.dart';
 
+class CenteredCategories extends StatelessWidget {
+  const CenteredCategories({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 300,
+        child: Categories(),
+      ),
+    );
+  }
+}
+
 class Categories extends StatelessWidget {
   const Categories({
-    super.key,
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +31,15 @@ class Categories extends StatelessWidget {
         itemBuilder: (context, index) {
           return Column(
             children: [
-              Container(
-                height: 60,
-                width: 60,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      categories[index].image,
+              ClipOval(
+                child: Container(
+                  height: 60,
+                  width: 60,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        categories[index].image,
+                      ),
                     ),
                   ),
                 ),

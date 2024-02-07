@@ -1,4 +1,4 @@
-import 'package:hi_farm/models/product.dart';
+import 'package:hi_farm/models/consultant.dart';
 
 class CartItem {
   int quantity;

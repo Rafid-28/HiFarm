@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hi_farm/constants.dart';
-import 'package:hi_farm/models/product.dart';
+import 'package:hi_farm/models/consultant.dart';
 import 'package:hi_farm/screens/product_screen.dart';
 import 'package:ionicons/ionicons.dart';
 

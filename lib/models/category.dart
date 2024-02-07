@@ -9,6 +9,8 @@ class Category {
 }
 
 final List<Category> categories = [
-  Category(title: "Shoes", image: "assets/shoes.jpg"),
-  Category(title: "Beauty", image: "assets/beauty.png"),
+  Category(title: "Consultant", image: "assets/farmer.png"),
+  Category(title: "Chat", image: "assets/chat.png"),
+  Category(title: "Market", image: "assets/market.png"),
+  Category(title: "News", image: "assets/news.png"),
 ];
