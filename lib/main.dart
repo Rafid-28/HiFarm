@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hi_farm/screens/main_screen.dart';
+import 'package:hi_farm/login/sign_in.dart';
+import 'package:hi_farm/login/sign_up.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         textTheme: GoogleFonts.mulishTextTheme(),
       ),
-      home: const MainScreen(),
+      home: const SignInThree(),
     );
   }
 }

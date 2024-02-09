@@ -10,6 +10,8 @@ dependencies:
   ionicons: ^0.2.2
   google_fonts: ^5.1.0
   iconsax: ^0.0.8
+  form_field_validator:
+  flutter_svg:
   flutter:
     sdk: flutter
 
@@ -26,3 +28,4 @@ flutter:
     - assets/images/
     - assets/images/
     - assets/
+    - assets/icon/
