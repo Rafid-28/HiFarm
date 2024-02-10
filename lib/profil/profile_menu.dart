@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hi_farm/models/user.dart';
 
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hi_farm/models/user.dart';
+
 class ProfileScreen extends StatelessWidget {
   final User user;
 
@@ -13,30 +18,17 @@ class ProfileScreen extends StatelessWidget {
     var isDark = MediaQuery.of(context).platformBrightness == Brightness.dark;
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(FontAwesomeIcons.angleLeft),
-        ),
         title: Text('Profile', style: Theme.of(context).textTheme.headline6),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(isDark ? FontAwesomeIcons.sun : FontAwesomeIcons.moon),
-          ),
-        ],
+        automaticallyImplyLeading: false, // Add this line to remove back button
       ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              SizedBox(
-                width: 120,
-                height: 120,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
-                  child: Image.asset(user.profileImage),
-                ),
+              CircleAvatar(
+                radius: 60,
+                backgroundImage: AssetImage(user.profileImage),
               ),
               const SizedBox(height: 10),
               Text('${user.username}',
@@ -51,13 +43,13 @@ class ProfileScreen extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue, // Adjust color as needed
+                    backgroundColor: Color.fromRGBO(117, 132, 103, 1),
                     side: BorderSide.none,
                     shape: const StadiumBorder(),
                   ),
                   child: const Text('Edit Profile',
-                      style: TextStyle(
-                          color: Colors.black)), // Adjust color as needed
+                      style:
+                          TextStyle(color: Color.fromARGB(255, 255, 255, 255))),
                 ),
               ),
               const SizedBox(height: 30),
@@ -73,6 +65,8 @@ class ProfileScreen extends StatelessWidget {
                   title: 'Information',
                   icon: FontAwesomeIcons.info,
                   onPress: () {}),
+              const Divider(),
+              const SizedBox(height: 10),
               ProfileMenuWidget(
                 title: 'Logout',
                 icon: FontAwesomeIcons.doorOpen,
@@ -80,6 +74,7 @@ class ProfileScreen extends StatelessWidget {
                 endIcon: false,
                 onPress: () {},
               ),
+              const Divider(),
             ],
           ),
         ),
@@ -107,8 +102,7 @@ class ProfileMenuWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var isDark = MediaQuery.of(context).platformBrightness == Brightness.dark;
-    var iconColor =
-        isDark ? Colors.blue : Colors.green; // Adjust color as needed
+    var iconColor = isDark ? Colors.blue : Colors.green;
 
     return ListTile(
       onTap: onPress,

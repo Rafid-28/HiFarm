@@ -6,6 +6,7 @@ import 'package:hi_farm/models/user.dart';
 import 'package:hi_farm/profil/profile_menu.dart';
 import 'package:hi_farm/screens/consultant_list.dart';
 import 'package:hi_farm/screens/home_screen.dart';
+import 'package:hi_farm/webview/tokopedia.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -22,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
     ConsultantList(),
     ChatList(),
     HomeScreen(),
-    Scaffold(),
+    WebviewPage(),
     ProfileScreen(
       user: users[0], // Provide an actual instance of User
     ),

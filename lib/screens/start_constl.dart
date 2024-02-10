@@ -101,7 +101,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         Container(
                           padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
-                            color: Colors.yellow,
+                            color: Color.fromARGB(255, 250, 185, 19),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Row(
@@ -151,8 +151,6 @@ class _DetailsPageState extends State<DetailsPage> {
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          // Implement the order now logic
-          // For example, you can show a dialog or navigate to another screen
           showDialog(
             context: context,
             builder: (context) => AddPaymentMethodView(),

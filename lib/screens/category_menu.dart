@@ -19,7 +19,6 @@ class MenuPage extends StatelessWidget {
               elevation: 5,
               child: InkWell(
                 onTap: () {
-                  // Navigate to the details page with the corresponding field
                   Navigator.push(
                     context,
                     MaterialPageRoute(

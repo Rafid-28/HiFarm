@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
-const kscaffoldColor = Color(0xffffffff);
-const kcontentColor = Color(0xffF5F5F5);
-const kprimaryColor = Color(0xffff660e);
+const kscaffoldColor = Color.fromARGB(255, 255, 255, 255);
+const kcontentColor = Color.fromARGB(255, 245, 245, 245);
+const kprimaryColor = Color.fromRGBO(117, 132, 103, 1);
 
-const primaryColor = Color(0xFF255ED6);
-const textColor = Color(0xFF35364F);
-const backgroundColor = Color(0xFFE6EFF9);
+const primaryColor = Color.fromRGBO(117, 132, 103, 1);
+const textColor = Color.fromARGB(255, 53, 54, 79);
+const backgroundColor = Color.fromARGB(255, 230, 239, 249);
 const redColor = Color(0xFFE85050);
 
 const defaultPadding = 16.0;

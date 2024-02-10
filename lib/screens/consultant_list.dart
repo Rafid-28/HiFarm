@@ -14,6 +14,7 @@ class _ConsultantListState extends State<ConsultantList> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Consultant List'),
+        automaticallyImplyLeading: false, // Add this line to remove back button
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

@@ -14,9 +14,9 @@ class User {
 
 final List<User> users = [
   User(
-    username: "john_doesss",
-    name: "John Doe",
-    email: "john.doe@example.com",
+    username: "Test User",
+    name: "User",
+    email: "user0@example.com",
     profileImage: "assets/images/five.jpg",
   ),
 ];

@@ -15,6 +15,7 @@ class _ChatListState extends State<ChatList> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Chat List'),
+        automaticallyImplyLeading: false, // Add this line to remove back button
       ),
       body: ListView.builder(
         itemCount: products.length,

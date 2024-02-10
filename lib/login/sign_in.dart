@@ -19,7 +19,7 @@ class _SignInThreeState extends State<SignInThree> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: const Color(0xFF21899C),
+      backgroundColor: Color.fromRGBO(117, 132, 103, 1),
       resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: SizedBox(
@@ -135,58 +135,55 @@ class _SignInThreeState extends State<SignInThree> {
 
               const SizedBox(width: 16),
 
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => SignUp()),
-                  );
-                },
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 44.0,
-                  height: 44.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25.0),
-                    color: Colors.white,
-                  ),
-                  child: SvgPicture.string(
-                    // Modify this SVG code based on your requirement
-                    '<svg viewBox="0.3 0.27 22.44 22.44" ><defs><linearGradient id="gradient" x1="0.500031" y1="0.970054" x2="0.500031" y2="0.0"><stop offset="0.0" stop-color="#ff0062e0"  /><stop offset="1.0" stop-color="#ff19afff"  /></linearGradient></defs><path transform="translate(0.3, 0.27)" d="M 9.369577407836914 22.32988739013672 C 4.039577960968018 21.3760986328125 0 16.77546882629395 0 11.22104930877686 C 0 5.049472332000732 5.049472808837891 0 11.22105026245117 0 C 17.39262962341309 0 22.44210624694824 5.049472332000732 22.44210624694824 11.22104930877686 C 22.44210624694824 16.77546882629395 18.40252304077148 21.3760986328125 13.07252502441406 22.32988739013672 L 12.45536518096924 21.8249397277832 L 9.986735343933105 21.8249397277832 L 9.369577407836914 22.32988739013672 Z" fill="url(#gradient)" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /><path transform="translate(6.93, 4.65)" d="M 8.976840972900391 9.986734390258789 L 9.481786727905273 6.844839572906494 L 6.508208274841309 6.844839572906494 L 6.508208274841309 4.656734466552734 C 6.508208274841309 3.759051322937012 6.844841003417969 3.085787773132324 8.191367149353027 3.085787773132324 L 9.650103569030762 3.085787773132324 L 9.650103569030762 0.2244201600551605 C 8.864629745483398 0.1122027561068535 7.966946125030518 0 7.181471347808838 0 C 4.600629806518555 0 2.805262804031372 1.570946097373962 2.805262804031372 4.376209735870361 L 2.805262804031372 6.844839572906494 L 0 6.844839572906494 L 0 9.986734390258789 L 2.805262804031372 9.986734390258789 L 2.805262804031372 17.8975715637207 C 3.422420024871826 18.00978851318359 4.039577484130859 18.06587600708008 4.656735897064209 18.06587600708008 C 5.273893356323242 18.06587600708008 5.89105224609375 18.009765625 6.508208274841309 17.8975715637207 L 6.508208274841309 9.986734390258789 L 8.976840972900391 9.986734390258789 Z" fill="#ffffff" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>',
-                    width: 22.44,
-                    height: 22.44,
-                  ),
-                ),
-              ),
+              // Icon(
+              //   child: Container(
+              //     alignment: Alignment.center,
+              //     width: 44.0,
+              //     height: 44.0,
+              //     decoration: BoxDecoration(
+              //       borderRadius: BorderRadius.circular(25.0),
+              //       color: Colors.white,
+              //     ),
+              //     child: SvgPicture.string(
+              //       // Modify this SVG code based on your requirement
+              //       '<svg viewBox="0.3 0.27 22.44 22.44" ><defs><linearGradient id="gradient" x1="0.500031" y1="0.970054" x2="0.500031" y2="0.0"><stop offset="0.0" stop-color="#ff0062e0"  /><stop offset="1.0" stop-color="#ff19afff"  /></linearGradient></defs><path transform="translate(0.3, 0.27)" d="M 9.369577407836914 22.32988739013672 C 4.039577960968018 21.3760986328125 0 16.77546882629395 0 11.22104930877686 C 0 5.049472332000732 5.049472808837891 0 11.22105026245117 0 C 17.39262962341309 0 22.44210624694824 5.049472332000732 22.44210624694824 11.22104930877686 C 22.44210624694824 16.77546882629395 18.40252304077148 21.3760986328125 13.07252502441406 22.32988739013672 L 12.45536518096924 21.8249397277832 L 9.986735343933105 21.8249397277832 L 9.369577407836914 22.32988739013672 Z" fill="url(#gradient)" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /><path transform="translate(6.93, 4.65)" d="M 8.976840972900391 9.986734390258789 L 9.481786727905273 6.844839572906494 L 6.508208274841309 6.844839572906494 L 6.508208274841309 4.656734466552734 C 6.508208274841309 3.759051322937012 6.844841003417969 3.085787773132324 8.191367149353027 3.085787773132324 L 9.650103569030762 3.085787773132324 L 9.650103569030762 0.2244201600551605 C 8.864629745483398 0.1122027561068535 7.966946125030518 0 7.181471347808838 0 C 4.600629806518555 0 2.805262804031372 1.570946097373962 2.805262804031372 4.376209735870361 L 2.805262804031372 6.844839572906494 L 0 6.844839572906494 L 0 9.986734390258789 L 2.805262804031372 9.986734390258789 L 2.805262804031372 17.8975715637207 C 3.422420024871826 18.00978851318359 4.039577484130859 18.06587600708008 4.656735897064209 18.06587600708008 C 5.273893356323242 18.06587600708008 5.89105224609375 18.009765625 6.508208274841309 17.8975715637207 L 6.508208274841309 9.986734390258789 L 8.976840972900391 9.986734390258789 Z" fill="#ffffff" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>',
+              //       width: 22.44,
+              //       height: 22.44,
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),
         SizedBox(
           height: size.height * 0.02,
         ),
-        Text.rich(
-          TextSpan(
-            style: GoogleFonts.inter(
-              fontSize: 12.0,
-              color: Colors.white,
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SignUp()),
+            );
+          },
+          child: Text.rich(
+            TextSpan(
+              children: [
+                TextSpan(
+                  text: 'Don’t have an account? ',
+                  style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      color: Color.fromRGBO(255, 255, 255, 1)),
+                ),
+                TextSpan(
+                  text: 'Sign Up here',
+                  style: TextStyle(
+                    color: Color(0xFFFE9879),
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
             ),
-            children: const [
-              TextSpan(
-                text: 'Don’t have an account? ',
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              TextSpan(
-                text: 'Sign Up here',
-                style: TextStyle(
-                  color: Color(0xFFFE9879),
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ],
           ),
-          textAlign: TextAlign.center,
         ),
       ],
     );
@@ -205,7 +202,7 @@ class _SignInThreeState extends State<SignInThree> {
       TextSpan(
         style: GoogleFonts.inter(
           fontSize: fontSize,
-          color: const Color(0xFF21899C),
+          color: const Color.fromRGBO(117, 132, 103, 1),
           letterSpacing: 2.000000061035156,
         ),
         children: const [
@@ -375,7 +372,7 @@ class _SignInThreeState extends State<SignInThree> {
         width: size.width * 0.7,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50.0),
-          color: const Color(0xFF21899C),
+          color: const Color.fromRGBO(117, 132, 103, 1),
           boxShadow: [
             BoxShadow(
               color: const Color(0xFF4C2E84).withOpacity(0.2),
@@ -409,7 +406,7 @@ class _SignInThreeState extends State<SignInThree> {
             height: 20.0,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5.0),
-              color: const Color(0xFF21899C),
+              color: Color.fromRGBO(117, 132, 103, 1),
             ),
             child: const Icon(
               Icons.check,
@@ -424,7 +421,7 @@ class _SignInThreeState extends State<SignInThree> {
             'Remember me',
             style: GoogleFonts.inter(
               fontSize: 15.0,
-              color: const Color(0xFF0C0D34),
+              color: Color.fromRGBO(117, 132, 103, 1),
             ),
           ),
           const Spacer(),

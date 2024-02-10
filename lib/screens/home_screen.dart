@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hi_farm/constants.dart';
+import 'package:hi_farm/news/all_news.dart';
+import 'package:hi_farm/news/components/news_list_tile.dart';
+import 'package:hi_farm/news/details_screen.dart';
+
+import 'package:hi_farm/news/news.dart';
 
 import 'package:hi_farm/widgets/features.dart';
 import 'package:hi_farm/widgets/home_appbar.dart';
@@ -9,7 +14,7 @@ import 'package:hi_farm/widgets/search_field.dart';
 import 'package:hi_farm/widgets/start_consult.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -57,11 +62,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => NewsList()),
+                        );
+                      },
                       child: const Text("See all"),
                     ),
                   ],
-                ),
+                ), // Added missing closing parenthesis
+                AgricultureNewsCard(),
               ],
             ),
           ),

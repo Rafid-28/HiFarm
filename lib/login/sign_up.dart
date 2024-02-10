@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hi_farm/login/sign_in.dart';
 import 'package:hi_farm/screens/main_screen.dart';
 
 class SignUp extends StatefulWidget {
@@ -19,7 +20,7 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: const Color(0xFF21899C),
+      backgroundColor: Color.fromRGBO(117, 132, 103, 1),
       resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: SizedBox(
@@ -175,29 +176,31 @@ class _SignUpState extends State<SignUp> {
         SizedBox(
           height: size.height * 0.02,
         ),
-        Text.rich(
-          TextSpan(
-            style: GoogleFonts.inter(
-              fontSize: 12.0,
-              color: Colors.white,
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SignInThree()),
+            );
+          },
+          child: Text.rich(
+            TextSpan(
+              children: [
+                TextSpan(
+                  text: 'Have an account? ',
+                  style: TextStyle(
+                      fontWeight: FontWeight.w500, color: Colors.white),
+                ),
+                TextSpan(
+                  text: 'Sign In',
+                  style: TextStyle(
+                    color: Color(0xFFFE9879),
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
             ),
-            children: const [
-              TextSpan(
-                text: 'Have an account? ',
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              TextSpan(
-                text: 'Sign Up here',
-                style: TextStyle(
-                  color: Color(0xFFFE9879),
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ],
           ),
-          textAlign: TextAlign.center,
         ),
       ],
     );
@@ -208,7 +211,7 @@ class _SignUpState extends State<SignUp> {
       TextSpan(
         style: GoogleFonts.inter(
           fontSize: fontSize,
-          color: const Color(0xFF21899C),
+          color: Color.fromRGBO(117, 132, 103, 1),
           letterSpacing: 2.000000061035156,
         ),
         children: const [
@@ -443,7 +446,7 @@ class _SignUpState extends State<SignUp> {
         width: size.width * 0.7,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50.0),
-          color: const Color(0xFF21899C),
+          color: Color.fromRGBO(117, 132, 103, 1),
           boxShadow: [
             BoxShadow(
               color: const Color(0xFF4C2E84).withOpacity(0.2),

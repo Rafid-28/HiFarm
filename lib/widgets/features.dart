@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hi_farm/models/field.dart';
 import 'package:hi_farm/models/features.dart';
 
 class CenteredCategories extends StatelessWidget {
