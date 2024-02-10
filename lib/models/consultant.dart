@@ -6,7 +6,7 @@ class Product {
   final String image;
   final double price;
   final List<Color> colors;
-  final String category;
+  final String field;
   final double rate;
 
   Product({
@@ -15,7 +15,7 @@ class Product {
     required this.image,
     required this.price,
     required this.colors,
-    required this.category,
+    required this.field,
     required this.rate,
   });
 }
@@ -30,7 +30,7 @@ final List<Product> products = [
     colors: [
       Colors.black,
     ],
-    category: "Perkebunan",
+    field: "Perkebunan",
     rate: 0,
   ),
   Product(
@@ -42,7 +42,7 @@ final List<Product> products = [
     colors: [
       Colors.black,
     ],
-    category: "holtikultura (sayur buah)",
+    field: "Holtikultura",
     rate: 4.8,
   ),
   Product(
@@ -54,7 +54,7 @@ final List<Product> products = [
     colors: [
       Colors.black,
     ],
-    category: "tanaman toga",
+    field: "Tanaman Toga",
     rate: 4.8,
   ),
   Product(
@@ -66,7 +66,7 @@ final List<Product> products = [
     colors: [
       Colors.black,
     ],
-    category: "tanaman hias",
+    field: "Tanaman Hias",
     rate: 4.8,
   ),
   Product(
@@ -78,7 +78,7 @@ final List<Product> products = [
     colors: [
       Colors.black,
     ],
-    category: "Padi-padian",
+    field: "Padi-padian",
     rate: 4.8,
   ),
 ];

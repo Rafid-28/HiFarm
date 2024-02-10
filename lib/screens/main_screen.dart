@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hi_farm/chat/chat%20list.dart';
 import 'package:hi_farm/constants.dart';
-
+import 'package:hi_farm/models/user.dart';
+import 'package:hi_farm/profil/profile_menu.dart';
 import 'package:hi_farm/screens/consultant_list.dart';
 import 'package:hi_farm/screens/home_screen.dart';
 import 'package:iconsax/iconsax.dart';
@@ -17,12 +18,14 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int currentTab = 2;
-  List screens = const [
+  List screens = [
     ConsultantList(),
     ChatList(),
     HomeScreen(),
     Scaffold(),
-    Scaffold()
+    ProfileScreen(
+      user: users[0], // Provide an actual instance of User
+    ),
   ];
 
   @override

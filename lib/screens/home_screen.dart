@@ -6,6 +6,7 @@ import 'package:hi_farm/widgets/home_appbar.dart';
 import 'package:hi_farm/widgets/home_slider.dart';
 
 import 'package:hi_farm/widgets/search_field.dart';
+import 'package:hi_farm/widgets/start_consult.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -42,6 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const SizedBox(height: 20),
                 const Categories(),
+                const SizedBox(height: 25),
+                const StartConsult(),
                 const SizedBox(height: 25),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hi_farm/models/consultant.dart';
-
 import 'package:hi_farm/widgets/product_card.dart';
 
 class ConsultantList extends StatefulWidget {

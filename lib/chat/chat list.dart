@@ -36,13 +36,12 @@ class _ChatListState extends State<ChatList> {
               children: [
                 SizedBox(height: 4),
                 Text(
-                  'Category: ${product.category}',
+                  'Category: ${product.field}',
                   style: TextStyle(color: Colors.grey),
                 ),
               ],
             ),
             onTap: () {
-              // Navigate to ChatScreen and pass the selected consultant's data
               Navigator.push(
                 context,
                 MaterialPageRoute(
