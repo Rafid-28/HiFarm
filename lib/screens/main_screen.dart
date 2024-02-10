@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hi_farm/chat/chat%20list.dart';
 import 'package:hi_farm/constants.dart';
 
 import 'package:hi_farm/screens/consultant_list.dart';
@@ -18,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
   int currentTab = 2;
   List screens = const [
     ConsultantList(),
-    Scaffold(),
+    ChatList(),
     HomeScreen(),
     Scaffold(),
     Scaffold()
@@ -57,7 +58,7 @@ class _MainScreenState extends State<MainScreen> {
                 currentTab = 0;
               }),
               icon: Icon(
-                Ionicons.grid_outline,
+                Ionicons.people_outline,
                 color: currentTab == 0 ? kprimaryColor : Colors.grey.shade400,
               ),
             ),
@@ -66,7 +67,7 @@ class _MainScreenState extends State<MainScreen> {
                 currentTab = 1;
               }),
               icon: Icon(
-                Ionicons.heart_outline,
+                Ionicons.chatbox_outline,
                 color: currentTab == 1 ? kprimaryColor : Colors.grey.shade400,
               ),
             ),

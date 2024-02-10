@@ -26,11 +26,11 @@ final List<Product> products = [
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
     image: "assets/images/four.jpeg",
-    price: 0,
+    price: 30000,
     colors: [
       Colors.black,
     ],
-    category: "Headphones",
+    category: "Perkebunan",
     rate: 0,
   ),
   Product(
@@ -38,11 +38,11 @@ final List<Product> products = [
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
     image: "assets/images/two.jpeg",
-    price: 0,
+    price: 30000,
     colors: [
       Colors.black,
     ],
-    category: "Woman Fashion",
+    category: "holtikultura (sayur buah)",
     rate: 4.8,
   ),
   Product(
@@ -50,11 +50,35 @@ final List<Product> products = [
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
     image: "assets/images/one.jpeg",
-    price: 0,
+    price: 30000,
     colors: [
       Colors.black,
     ],
-    category: "Watch",
+    category: "tanaman toga",
+    rate: 4.8,
+  ),
+  Product(
+    title: "Consultant 4",
+    description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
+    image: "assets/images/three.jpeg",
+    price: 30000,
+    colors: [
+      Colors.black,
+    ],
+    category: "tanaman hias",
+    rate: 4.8,
+  ),
+  Product(
+    title: "Consultant 5",
+    description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
+    image: "assets/images/five.jpg",
+    price: 30000,
+    colors: [
+      Colors.black,
+    ],
+    category: "Padi-padian",
     rate: 4.8,
   ),
 ];

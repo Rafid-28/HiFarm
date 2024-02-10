@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:hi_farm/chat/chat_screen.dart';
+import 'package:hi_farm/models/consultant.dart';
 import '../global_members.dart';
 
 class SenderRowView extends StatelessWidget {
-  const SenderRowView({Key? key, required this.index}) : super(key: key);
+  const SenderRowView({Key? key, required this.index, required this.product})
+      : super(key: key);
 
   final int index;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +19,14 @@ class SenderRowView extends StatelessWidget {
       title: Wrap(alignment: WrapAlignment.end, children: [
         Container(
           padding: const EdgeInsets.all(10),
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
               shape: BoxShape.rectangle,
               color: Color(0xffD11C2D),
               borderRadius: BorderRadius.all(Radius.circular(20))),
           child: Text(
             chatModelList.elementAt(index).message,
             textAlign: TextAlign.left,
-            style: const TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white),
             softWrap: true,
           ),
         ),
@@ -38,7 +40,7 @@ class SenderRowView extends StatelessWidget {
         ),
       ),
       trailing: CircleAvatar(
-        backgroundImage: NetworkImage(urlTwo),
+        backgroundImage: AssetImage(product.image),
       ),
     );
   }

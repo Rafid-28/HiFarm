@@ -3,20 +3,23 @@ import 'package:hi_farm/chat/ChatMessagesModel.dart';
 import 'package:hi_farm/chat/global_members.dart';
 import 'package:hi_farm/chat/widgets/receiver_row_view.dart';
 import 'package:hi_farm/chat/widgets/sender_row_view.dart';
+import 'package:hi_farm/models/consultant.dart';
 
-var url =
-    'https://i.pinimg.com/736x/fd/6e/04/fd6e04548095d7f767917f344a904ff1.jpg';
-var urlTwo =
-    'https://sguru.org/wp-content/uploads/2017/03/cute-n-stylish-boys-fb-dp-2016.jpg';
+class ChatScreen extends StatefulWidget {
+  final String consultantName;
+  final String consultantImage;
 
-class MyChatUI extends StatefulWidget {
-  const MyChatUI({Key? key}) : super(key: key);
+  const ChatScreen({
+    Key? key,
+    required this.consultantName,
+    required this.consultantImage,
+  }) : super(key: key);
 
   @override
-  MyChatUIState createState() => MyChatUIState();
+  _ChatScreenState createState() => _ChatScreenState();
 }
 
-class MyChatUIState extends State<MyChatUI> {
+class _ChatScreenState extends State<ChatScreen> {
   var controller = TextEditingController();
   var scrollController = ScrollController();
   var message = '';
@@ -49,10 +52,10 @@ class MyChatUIState extends State<MyChatUI> {
         leadingWidth: 20,
         title: ListTile(
           leading: CircleAvatar(
-            backgroundImage: NetworkImage(url),
+            backgroundImage: AssetImage(widget.consultantImage),
           ),
-          title: const Text(
-            'Usama XD',
+          title: Text(
+            widget.consultantName,
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           subtitle: const Text(
@@ -74,19 +77,24 @@ class MyChatUIState extends State<MyChatUI> {
       body: Column(
         children: [
           Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: ListView.builder(
-                controller: scrollController,
-                physics: const BouncingScrollPhysics(),
-                itemCount: chatModelList.length,
-                itemBuilder: (context, index) =>
-                    chatModelList.elementAt(index).isMee
-                        ? SenderRowView(
-                            index: index,
-                          )
-                        : ReceiverRowView(index: index),
-              )),
+            flex: 1,
+            fit: FlexFit.tight,
+            child: ListView.builder(
+              controller: scrollController,
+              physics: const BouncingScrollPhysics(),
+              itemCount: chatModelList.length,
+              itemBuilder: (context, index) {
+                if (chatModelList.elementAt(index).isMee) {
+                  // If the message is from the sender
+                  return SenderRowView(index: index, product: products[index]);
+                } else {
+                  // If the message is from the receiver
+                  return ReceiverRowView(
+                      index: index, product: products[index]);
+                }
+              },
+            ),
+          ),
           Container(
             alignment: Alignment.center,
             color: Colors.white,
