@@ -216,15 +216,15 @@ class _SignUpState extends State<SignUp> {
         ),
         children: const [
           TextSpan(
-            text: 'LOGIN',
+            text: 'TANI',
             style: TextStyle(
               fontWeight: FontWeight.w800,
             ),
           ),
           TextSpan(
-            text: 'PAGE',
+            text: 'BAHAGIA',
             style: TextStyle(
-              color: Color(0xFFFE9879),
+              color: Color.fromRGBO(53, 56, 75, 1),
               fontWeight: FontWeight.w800,
             ),
           ),

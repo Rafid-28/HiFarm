@@ -191,7 +191,7 @@ class _SignInThreeState extends State<SignInThree> {
 
   Widget logo(double height_, double width_) {
     return SvgPicture.asset(
-      'assets/logo.svg',
+      'assets/logo/logo_color.svg',
       height: height_,
       width: width_,
     );
@@ -207,15 +207,15 @@ class _SignInThreeState extends State<SignInThree> {
         ),
         children: const [
           TextSpan(
-            text: 'LOGIN',
+            text: 'TANI',
             style: TextStyle(
               fontWeight: FontWeight.w800,
             ),
           ),
           TextSpan(
-            text: 'PAGE',
+            text: 'BAHAGIA',
             style: TextStyle(
-              color: Color(0xFFFE9879),
+              color: Color.fromRGBO(53, 56, 75, 1),
               fontWeight: FontWeight.w800,
             ),
           ),
